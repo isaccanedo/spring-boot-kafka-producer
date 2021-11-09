@@ -13,7 +13,7 @@
 </dependency>
 ```
 
-# 2. Depois disso vamos para o application.properties:
+# 2. application.properties:
 
 ```
 # Producer properties
@@ -26,9 +26,10 @@ topic.name.producer=topico.comando.teste
 # Common Kafka Properties
 auto.create.topics.enable=true
 ```
-Nesse primeiro momento coloquei a classe StringSerializer para a fazer a serialização das mensagens, só pra mandar um texto qualquer.
-A propriedade auto.create.topics.enable=true cria automaticamente os tópicos registrados nessas propriedades. Nesse caso coloquei topic.name.producer=topico.comando.teste.
-Bora para o código então.
+Nesse primeiro momento coloquei a classe StringSerializer para a fazer a serialização das mensagens, 
+só pra mandar um texto qualquer.
+A propriedade auto.create.topics.enable=true cria automaticamente os tópicos registrados nessas propriedades. 
+Nesse caso coloquei topic.name.producer=topico.comando.teste.
 Na classe main coloquei a anotação “@ EnableKafka”, que faz com que seja possível a conexão com um tópico.
 
 ```
@@ -43,7 +44,7 @@ public class DemoApplication {
 }
 ```
 
-A minha classe producer ficou assim:
+### classe producer
 
 ```
 @Slf4j
